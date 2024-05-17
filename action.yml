@@ -53,3 +53,35 @@ runs:
       if: runner.os == 'Windows' && inputs.choco != ''
       run: choco install -y ${{ inputs.choco }}
       shell: sh
+
+    - name: Install pacman packages (mingw64)
+      if: runner.os == 'Windows' && inputs.pacman-mingw64 != ''
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        msystem: mingw64
+        install: ${{ inputs.pacman-mingw64 }}
+
+    - name: Install pacman packages (mingw32)
+      if: runner.os == 'Windows' && inputs.pacman-mingw32 != ''
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        msystem: mingw64
+        install: ${{ inputs.pacman-mingw32 }}
+
+    - name: Install pacman packages (ucrt64)
+      if: runner.os == 'Windows' && inputs.pacman-ucrt64 != ''
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        msystem: mingw64
+        install: ${{ inputs.pacman-ucrt64 }}
+
+    - name: Install pacman packages (clang64)
+      if: runner.os == 'Windows' && inputs.pacman-clang64 != ''
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        msystem: mingw64
+        install: ${{ inputs.pacman-clang64 }}
