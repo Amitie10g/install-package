@@ -24,6 +24,22 @@ inputs:
     description: Packages to install with choco on Windows
     required: false
     default: ''
+  pacman-mingw64:
+    description: Packages to install with pacman on Windows
+    required: false
+    default: ''
+  pacman-mingw32:
+    description: Packages to install with pacman on Windows
+    required: false
+    default: ''
+  pacman-ucrt64:
+    description: Packages to install with pacman on Windows
+    required: false
+    default: ''
+  pacman-clang64:
+    description: Packages to install with pacman on Windows
+    required: false
+    default: ''
 runs:
   using: "composite"
   steps:
