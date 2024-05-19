@@ -1,4 +1,4 @@
-name: 'Install Package'
+name: 'Install Packages'
 description: 'Install system packages from brew, brew cask, apt, apk, choco and msys2.'
 branding:
   icon: package
