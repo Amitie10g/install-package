@@ -34,5 +34,4 @@ jobs:
           apt: rolldice bcal
           choco: graphviz less
           pacman: mingw-w64-x86_64-graphviz
-          pacboy: mingw-w64-x86_64-graphviz
           msystem: mingw64
