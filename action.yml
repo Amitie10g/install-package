@@ -83,7 +83,7 @@ runs:
     - name: Install pacboy packages
       if: >
         runner.os == 'Windows' &&
-        inputs.pacman != '' &&
+        inputs.pacboy != '' &&
         (inputs.msystem == 'mingw64' || inputs.msystem == 'mingw32' || inputs.msystem ==  'ucrt64' || inputs.msystem ==  'clang64')
       uses: msys2/setup-msys2@v2
       with:
