@@ -16,20 +16,21 @@ jobs:
     strategy:
       matrix:
         os:
-          - windows-latest  # Windows Server 2022 (windows-2022)
-          - windows-2019  # Windows Server 2019
-          - ubuntu-22.04  # Ubuntu 22.04
-          - ubuntu-latest  # Ubuntu 20.04 (ubuntu-20.04)
-          - ubuntu-18.04  # Ubuntu 18.04
-          - macos-12  # macOS Monterey 12
-          - macos-latest  # macOS Big Sur 11 (macos-11)
-          - macos-10.15  # macOS Catalina 10.15
-          # https://docs.github.com/en/actions/using-jobs/choosing-the-runner-for-a-job#choosing-github-hosted-runners
+          - ubuntu-24.04
+          - ubuntu-22.04
+          - ubuntu-20.04
+          - windows-2022
+          - windows-2019
+          - macos-14
+          - macos-13
+          - macos-12
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: ./
         with:
           brew: hello yq
           brew-cask: MacVim
           apt: rolldice bcal
           choco: graphviz less
+          pacman: mingw-w64-x86_64-xz
+          msystem: mingw64
